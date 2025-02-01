@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Scripts/Utility/UIToolkit/uss/button.uss?fileID=7433441132597879392&amp;guid=a521e631ce9b95343b9da5a34d78cf14&amp;type=3#button" />
+    <ui:VisualElement class="root">
+        <ui:Button name="extendsButton" class="custom-button">
+            <ui:Label text="壱弐参四御肋七八九零" />
+        </ui:Button>
+    </ui:VisualElement>
+</ui:UXML>

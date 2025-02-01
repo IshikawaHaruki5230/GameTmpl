@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>StateVariable</id>
+    <version>1.4.0</version>
+    <authors>tanitaka-tech</authors>
+    <license type="file">LICENSE.txt</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <readme>README.md</readme>
+    <description>A library for managing state variables</description>
+    <tags>state variable</tags>
+    <repository type="git" url="https://github.com/tanitaka-tech/StateVariable" commit="5e761c94dc8ee1cf37497016a39c1edee299688c" />
+    <dependencies>
+      <group targetFramework="net6.0">
+        <dependency id="ObservableCollections" version="2.2.2" exclude="Build,Analyzers" />
+        <dependency id="ObservableCollections.R3" version="2.2.2" exclude="Build,Analyzers" />
+        <dependency id="R3" version="1.2.9" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net8.0">
+        <dependency id="ObservableCollections" version="2.2.2" exclude="Build,Analyzers" />
+        <dependency id="ObservableCollections.R3" version="2.2.2" exclude="Build,Analyzers" />
+        <dependency id="R3" version="1.2.9" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.1">
+        <dependency id="ObservableCollections" version="2.2.2" exclude="Build,Analyzers" />
+        <dependency id="ObservableCollections.R3" version="2.2.2" exclude="Build,Analyzers" />
+        <dependency id="R3" version="1.2.9" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

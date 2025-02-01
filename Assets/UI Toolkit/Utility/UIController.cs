@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -12,16 +13,12 @@ public class UIController : MonoBehaviour
     {
         var button = Instantiate(sampleButton);
         _uiDocument = button.GetComponent<UIDocument>();
-        var buttonElement = _uiDocument.rootVisualElement.Q<Button>("Button1");
-        buttonElement.clicked += () => 
-        {
-            var label = _uiDocument.rootVisualElement.Q<Label>("Label1");
-            label.text = "clickd!";
-            var baseElement = _uiDocument.rootVisualElement.Q<VisualElement>("Base");
-            baseElement.style.width = 150;
-            baseElement.style.height = 150;
-            baseElement.transform.position = GetRandomScreenPosition();
-        };
+
+        ListView listVIewElemnt = _uiDocument.rootVisualElement.Q<ListView>();
+        listVIewElemnt.makeItem = () => new Label();
+        listVIewElemnt.bindItem = (item, i) => { ((Label)item).text = $"{i}th element"; };
+        listVIewElemnt.itemsSource = Enumerable.Range(0,5).ToList();
+        listVIewElemnt.fixedItemHeight = 50;
 
     }
 
